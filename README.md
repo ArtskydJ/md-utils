@@ -4,7 +4,7 @@ md-utils
 [![Build Status](https://travis-ci.org/ArtskydJ/md-utils.svg?branch=master)](https://travis-ci.org/ArtskydJ/md-utils)
 
 - [Information](#information)
-- [Examples](#examples)
+- [Example](#example)
 - [Install](#install)
 - [Require](#require)
 - [License](#license)
@@ -16,12 +16,12 @@ Ever wanted to have an automatically generating table of contents?
 Ever wanted an automatic build status picture?  
 NOW YOU CAN!!!
 
-Ever wanted more features than these?  
+Did you want EVEN MORE features?  
 Make a pull request! I would love to have community involvement!
 
-##Examples
+#Example
 
-Here is your readme.markdown file:
+Here is your readme.mdtemplate file:
 
 	my-project
 	==========
@@ -32,33 +32,52 @@ Here is your readme.markdown file:
 
 	#info
 
-	dis u like
+	You want my thing; install it NOW!
 
 	#install
 
-	use npm plz
+	Use `npm` plz.
 
 	#example
 
-	noobz copy, paste following:
+	Simple example:
 
-		{{./examples/example-basic.js}}
+	```js
+	{{./examples/example-basic.js}}
+	```
 
-	haxors, this eye candy 4 u:
+	Advanced usage:
 
-		{{./examples/example-advanced.js}}
-
+	```js
+	{{./examples/example-advanced.js}}
+	```
 
 	#license
 
 	{{mit-license}}
 
-##Install
+
+#Install
+
 Install with npm:
-	npm install md-utils
+
+	npm install md-utils -g
 	
-##Require
-	var areEqual = require('md-utils')
+#Use
+
+Will search for all `*.mdtemplate` files and create/overwrite `*.md`.
+
+E.g. These files are found: `overwrite.md`, `overwrite.mdtemplate`, `createnew.mdtemplate`, and `dontchange.md`.  
+Afterward, you will have these files: `overwrite.md`, `overwrite.mdtemplate`, `createnew.md`, `createnew.mdtemplate`, and `dontchange.md`.  
+`overwrite.md` might have been overwritten.
+
+In a command line do:
+
+	md-utils C:/where/mdtemplate/files/are/stored
+
+or, if you're in the correct directory, do:
+
+	md-utils
 
 ##License
 

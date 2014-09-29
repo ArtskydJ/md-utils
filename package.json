@@ -9,9 +9,9 @@
   "description": "Checks if two objects have the same keys and properties",
   "keywords": [
     "object",
-	"equal",
+    "equal",
     "keys",
-	"properties"
+    "properties"
   ],
   "repository": {
     "type": "git",
