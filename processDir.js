@@ -2,21 +2,21 @@ var fs = require('fs')
 var path = require('path')
 
 module.exports = function processDir(dir) {
-	//scan dir, get list of .mdtemplate files
-	//go through list
-		//scan for moustaches, get list of them, get list of titles; don't rescan file again
-		//go through list
-			//if found table-of-contents, pop new toc into new file
-			//if found license: replace with link to license or license file
-			//if found file: scan file, delete surrounding newlines, pop it in new file
-		//write new file
-	//go on to next
+	var files = fs.readdirSync(dir)
+	var examples = files
+	try {
+		var exampleDir = fs.readdirSync(path.resolve(dir, 'example'))
+		examples.push.apply(null, exampleDir)
+	} catch (err) {
+		if (err.code !== 'ENOENT') {throw err}
+	}
 
-	fs.readdirSync(dir).filter(function (file) {
-		return path.extname(file) === '.mdtemplate'
+	var packagejson = fs.readfileSync(path.resolve(dir, 'package.json'))
+	
+	files.filter(function (file) {
+		return (path.extname(file).toLowerCase() === '.mdtemplate')
 	}).forEach(function (filePath) {
 		var file = fs.readfileSync(filePath, {encoding: 'utf8'})
-		//var newFile = new String(file)
-		processFile(file)
+		processFile(file, packagejson)
 	})
 }
