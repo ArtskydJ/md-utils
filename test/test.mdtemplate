@@ -41,11 +41,15 @@ Returns a [`debounce()`](#debouncekey-cb) function.
 
 Use `debounce()` with different keys:
 
-{{./test-data/different-keys.js}}
+```js
+{{*/test-data/different-keys*js}}
+```
 
 Scaling delay:
 
-{{./test-data/scaling-delay.js}}
+```js
+{{*/test-data/scaling-delay*js}}
+```
 
 #License
 

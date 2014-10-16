@@ -3,15 +3,7 @@ md-utils
 
 [![Build Status](https://travis-ci.org/ArtskydJ/md-utils.svg?branch=master)](https://travis-ci.org/ArtskydJ/md-utils)
 
-	- [Information](#information)
-	- [Tags](#tags)
-			- [{ {table-of-contents} }](#tableofcontents)
-			- [{ {badge.travis} }](#badgetravis)
-			- [{ {filename} }](#filename)
-	- [Example](#example)
-	- [Install](#install)
-	- [Use](#use)
-		- [License](#license)
+{{table-of-contents}}
 
 #Information
 
@@ -44,38 +36,7 @@ For example, `./example/example1.js` should be entered as `*/example/example1*js
 Here is your readme.mdtemplate file:
 
 ```
-my-project
-==========
-
-{{travis-ci-build-status}}
-
-{{table-of-contents}}
-
-#info
-
-You want my thing; install it NOW!
-
-#install
-
-Use `npm` plz.
-
-#example
-
-Simple example:
-
-```js
-{{*/examples/example-basic*js}}
-```
-
-Advanced usage:
-
-```js
-{{*/examples/example-advanced*js}}
-```
-
-#license
-
-{{license.mit.text}}
+{{*/example*mdtemplate}}
 ```
 
 

@@ -2,3 +2,4 @@
 ## Custom
 #############
 node_modules
+./example.md #meant to be shown inside the readme.

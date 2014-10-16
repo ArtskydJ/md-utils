@@ -1,4 +1,9 @@
 {
-  "organization": "artskydj",
-  "project": "debouncer"
+  "name": "md-utils",
+  "version": "0.0.1",
+  "main": "./index.js",
+  "author": {
+    "name": "Joseph Dykstra",
+    "email": "josephdykstra@gmail.com"
+  }
 }
