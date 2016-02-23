@@ -1,7 +1,0 @@
-#############
-## Custom
-#############
-node_modules
-
-#meant to be shown inside the readme.
-example.md
